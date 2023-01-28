@@ -1,0 +1,23 @@
+/* File might not be sent to github if it doesn't contain anything, so I added a comment. */
+
+
+
+
+/* Styling applied to the table required in manage products */
+table, tr, th, td{
+    border: 2px solid black;
+}
+
+th, td{
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+table{
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+
+/* Styling above applied to the table required in manage products */
