@@ -16,6 +16,7 @@ admin/update-product.html
 ● Knapp/länk raderar befintlig produkt
  
  */
+
 async function fetchAllProducts(){
     try{
         const response1 = await fetch('http://localhost:5000/api-users/token',{
@@ -44,7 +45,7 @@ async function fetchAllProducts(){
 
         let productsHTML = "";
         for (let product of products){
-            productsHTML += ` <tbody> <td>${product.title}</td> <td>${product.description}</td> <td>${product.price}</td> <td>${product.stock}</td> <td>${product.category}</td> <td>${product.date}</td> <td> <a href="#" class="edit-links">Edit</a> <a href="#" class="delete-products-links" data-id=${product._id}>Delete</a></td> </tbody> `;
+            productsHTML += `<div> <tbody class = "productList"> <td>${product.title}</td> <td>${product.description}</td> <td>${product.price}</td> <td>${product.stock}</td> <td>${product.category}</td> <td>${product.date}</td> <td> <a href="#" class="edit-links">Edit</a> <a href="#" class="delete-products-links" data-id=${product._id}>Delete</a></td> </tbody> </div>`;
         }
 
         document.getElementById('manage-products-table').innerHTML += productsHTML
@@ -75,7 +76,8 @@ async function fetchAllProducts(){
                     }
                 });
                 console.log(response3);
-                console.log(e.target.parentNode)
+                e.target.parentNode.parentNode.remove();
+
 
             } catch (error){
                 console.log(error);
