@@ -1,25 +1,48 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- ● admin/create-product.html
-○ Ett formulär för att skapa nya produkter. Skall ha minst följande komponenter
-■ <Input> för title
-■ <textarea> för description
-■ <input> för price
-■ <input> för stock
-■ Knapp för att skapa produkten
-■ En tillbaka-länk för att navigera tillbaka till
-admin/manage-products.html
-○ Om formuläret lyckades skapa en ny produkt, skicka vidare användaren till
-admin/manage-products.html
- -->
+    <div id="container">
+        <h3> Create a new product </h3>
+        <label for=""> Details</label>
+        
+
+     <main>
+        <br>
+
+        <form id="create-product-form">
+            <div> title
+                <input name="content" id="content-textarea"></div>
+            <div> description
+                <input name="content" id="content-textarea"></div>
+            <div> price
+                <input name="content" id="content-textarea"></div>
+            <div> stock
+                <input name="content" id="content-textarea"></div>
+            <div> category
+                <input name="content" id="content-textarea"></div>
+            <div> date
+                <input name="content" id="content-textarea"></div>
+            <div> manage
+                <input name="content" id="content-textarea"></div>
+            <br>
+             <input type="submit" value="Create">
+            
+            <a href="index.html"> &#8617; Back </a>
+        </form>
+
+      </main>  
+    </div>
 
 
-    <script src="js/create-product.js"></script>
+
+    
+<script src="/admin/js/functions.js"></script>
+<script src="/admin/js/create-product.js"></script>    
 </body>
 </html>
