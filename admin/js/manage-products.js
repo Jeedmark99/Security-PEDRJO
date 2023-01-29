@@ -45,7 +45,8 @@ async function fetchAllProducts(){
 
         let productsHTML = "";
         for (let product of products){
-            productsHTML += `<div> <tbody class = "productList"> <td>${product.title}</td> <td>${product.description}</td> <td>${product.price}</td> <td>${product.stock}</td> <td>${product.category}</td> <td>${product.date}</td> <td> <a href="#" class="edit-links">Edit</a> <a href="#" class="delete-products-links" data-id=${product._id}>Delete</a></td> </tbody> </div>`;
+            let productDate = new Date(product.date)
+            productsHTML += `<div> <tbody class = "productList"> <td>${product.title}</td> <td>${product.description}</td> <td>${product.price}</td> <td>${product.stock}</td> <td>${product.category}</td> <td>${productDate.toLocaleDateString()}</td> <td> <a href="#" class="edit-links">Edit</a> <a href="#" class="delete-products-links" data-id=${product._id}>Delete</a></td> </tbody> </div>`;
         }
 
         document.getElementById('manage-products-table').innerHTML += productsHTML
