@@ -71,7 +71,7 @@ async function fetchAllProducts(){
                     method: 'DELETE',
                     headers:{
                         'Content-Type':'application/json',
-                        'Authorization': 'Bearer ' + data.accessToken
+                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxIiwiZGF0ZSI6IjIwMjMtMDEtMjhUMTU6NTM6NTcuODYyWiIsImlhdCI6MTY3NTAxNzc1MH0.PX4OBSFE8Jshey1H-_aPlHupakar-ZrxoDtXPzaPyl8'
                     }
                 });
                 console.log(response3);
