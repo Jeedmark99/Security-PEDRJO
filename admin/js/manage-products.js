@@ -19,7 +19,7 @@ admin/update-product.html
 
 async function fetchAllProducts(){
     try{
-        const response1 = await fetch('http://localhost:5000/api-users/token',{
+        const response1 = await fetch(ROOT_URL + '/api-users/token',{
             method:'POST',
             headers: {
                 'Content-Type':'application/json'
@@ -33,7 +33,7 @@ async function fetchAllProducts(){
         const data = await response1.json();
         console.log(data.accessToken);
   
-        const response2 = await fetch ('http://localhost:5000/products', {
+        const response2 = await fetch (ROOT_URL +'/products', {
             method:"GET",
             headers:{
                 'Authorization': 'Bearer ' + data.accessToken
@@ -46,7 +46,8 @@ async function fetchAllProducts(){
         let productsHTML = "";
         for (let product of products){
             let productDate = new Date(product.date)
-            productsHTML += `<div> <tbody class = "productList"> <td>${product.title}</td> <td>${product.description}</td> <td>${product.price}</td> <td>${product.stock}</td> <td>${product.category}</td> <td>${productDate.toLocaleDateString()}</td> <td> <a href="#" class="edit-links">Edit</a> <a href="#" class="delete-products-links" data-id=${product._id}>Delete</a></td> </tbody> </div>`;
+            productsHTML += ` <tbody class = "productList"> <td>${product.title}</td> <td>${product.description}</td> <td>${product.price}</td> <td>${product.stock}</td> <td>${product.category}</td> <td>${productDate.toLocaleDateString()}</td> 
+            <td> <a href="update-product.html?id=${product._id}" class="edit-links">Edit</a> <a href="#" class="delete-products-links" data-id=${product._id}>Delete</a></td> </tbody> `;
         }
 
         document.getElementById('manage-products-table').innerHTML += productsHTML
@@ -69,7 +70,7 @@ async function fetchAllProducts(){
 
 
             try{
-                const response3 = await fetch('http://localhost:5000/products/' + e.target.dataset.id, {
+                const response3 = await fetch(ROOT_URL + '/products/' + e.target.dataset.id, {
                     method: 'DELETE',
                     headers:{
                         'Content-Type':'application/json',

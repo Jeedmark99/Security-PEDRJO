@@ -5,34 +5,6 @@
 
 
 /* Styling applied to the table required in manage products */
-table, tr, th, td{
-    border: 2px solid black;
-}
-
-th, td{
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-table{
-    margin-top: 30px;
-    border-collapse: collapse;
-}
 
 
-.delete-products-link{
-    
-        background-color: white;
-        border: 2px solid black;
-        color: green;
-        padding: 5px 10px;
-        text-align: center;
-        display: inline-block;
-        font-size: 20px;
-        margin: 10px 30px;
-        cursor: pointer;
-        text-decoration:none;
-}
 /* Styling above applied to the table required in manage products */
