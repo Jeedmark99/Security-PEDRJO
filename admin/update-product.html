@@ -1,19 +1,46 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- ● admin/update-product.html
-○ Ett formulär för att uppdatera befintliga produkter. Har samma komponenter
-som create-product.html formuläret. Skillnaden är att alla fält är förifyllda med
-den befintliga produktens data.
-○ Om formuläret lyckades skapa en ny produkt, skicka vidare användaren till
-admin/manage-products.html -->
+
+    <div id="container">
+        <h3>Update a product</h3>
+        <label for=""> Details</label>
+        
+
+     <main>
+        <br>
+
+        <form id="update-product-form">
+            <div> title
+                <input name="title" id="content-textarea"></div>
+            <div> description
+                <input name="description" id="content-textarea"></div>
+            <div> price
+                <input name="price" id="content-textarea"></div>
+            <div> stock
+                <input name="stock" id="content-textarea"></div>
+            <div> categories
+                <input name="categories" id="content-textarea"></div>
+
+            <div> manage
+                <input name="manage" id="content-textarea"></div>
+            <br>
+             <input type="submit" value="Update">
+            
+            <a href="/admin/index.html"> &#8617; Back </a>
+        </form>
+
+      </main>  
+    </div>
 
 
-    <script src="js/update-product.js"></script>
+<script src="js/functions.js"></script>    
+<script src="js/update-product.js"></script>    
 </body>
 </html>

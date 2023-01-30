@@ -1,11 +1,41 @@
-// File might not be sent to github if it doesn't contain anything, so I added a comment.
 
-/**
- ● admin/update-product.html
-○ Ett formulär för att uppdatera befintliga produkter. Har samma komponenter
-som create-product.html formuläret. Skillnaden är att alla fält är förifyllda med
-den befintliga produktens data.
-○ Om formuläret lyckades skapa en ny produkt, skicka vidare användaren till
-admin/manage-products.html
+console.log(window.location.search);
+let urlParams = new URLSearchParams(window.location.search)
+console.log(urlParams);
+console.log(urlParams.get('id'));
 
- */
+
+async function updateProduct() {
+    checkAccessToken();
+
+    try {
+        const response = await fetch(ROOT_URL + urlParams.get('id'), {
+            method: 'GET', // *GET, POST, PUT, DELETE, etc.
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem('accessToken')
+            }
+        });
+        const product = await response.json()
+        console.log(product)
+        document.getElementById('content-textarea').value = product.content;
+
+        const response1 = await fetch(`http://localhost:5000/products/${id}`,{
+            method:'POST',
+            headers: {
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify({  
+                username: "user1",
+                password: "whatever123"
+            }) 
+        });
+
+        const data = await response1.json();
+        console.log(data.accessToken);
+    } catch (error) {
+        console.log(error);
+    }
+}
+updateProduct()
+
+
