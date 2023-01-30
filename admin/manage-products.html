@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>Manage products</h1>
+    <h1 id="h1-manage-product">Manage products</h1>
+    <div id="manage-products-div">
 <!-- ● admin/manage-products.html
 ○ En länk högst upp på sidan, som navigerar till products.html,
 ○ Knapp/länk som navigerar till admin/create-product.html
@@ -20,7 +21,8 @@
 ● Knapp/länk redigera befintlig produkt. Navigerar till
 admin/update-product.html
 ● Knapp/länk raderar befintlig produkt -->
-<a href="#">Create new product</a>
+<br>
+<a href="create-product.html" id="create-new-link">Create new product</a>
 
 <table id = "manage-products-table">
     <thead>
@@ -35,6 +37,7 @@ admin/update-product.html
         </tr>
     </thead>
 
+ 
     <!-- this is what I need to do in js -->
     <!-- <tbody>
         <td>An image Title</td>
@@ -49,7 +52,9 @@ admin/update-product.html
 
 
 </table>
+</div>
 
+<script src="js/functions.js"></script>   
     <script src="js/manage-products.js"></script>
 </body>
 </html>
