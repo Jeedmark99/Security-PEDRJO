@@ -18,6 +18,8 @@ body{
 /* Styling applied to the table required in manage products */
 table, tr, th, td{
     border: 2px solid black;
+    background-color: rgb(174, 172, 172);
+
 }
 
 th, td{
@@ -39,7 +41,8 @@ a:hover{
 
 .delete-products-links,
 .edit-links,
-#create-new-link{
+#create-new-link,
+#home-link{
     padding: 15px;
     color: white;
     background-color: black;
