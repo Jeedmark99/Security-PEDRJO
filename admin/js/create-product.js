@@ -7,19 +7,19 @@ async function createProduct() {
             e.preventDefault();
             console.log(e.target);
 
-            let formData = new FormData(e.target); 
-            let formDataObject = {
-                content: formData.get('content')
-            }
 
-            console.log(JSON.stringify(formDataObject));
+            // Solution 3
+             let formDataObject = serializeForm(e.target);
+             console.log(formDataObject);
 
 
             const response2 = await fetch(ROOT_URL + '/products' , {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + localStorage.getItem('access_token')
+                    'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
+                    'Content-Type': 'application/x-www-form-urlencoded'
+
                 },
                 body: JSON.stringify(formDataObject)
             })
