@@ -15,21 +15,26 @@ header {
 
     display: flex;
     align-self: flex-end;
+    border-radius: 2px black solid;
 }
-
+ 
 nav {
     padding-top: 25px;
-    flex: 1
+    flex: 1;
 }
 
 button {
-    background-color: rgb(223, 204, 176);
-    box-shadow: 0 5px 0 rgb(195, 178, 151);
+    background-image: linear-gradient(to right, #b9ad9a 0%, #fff4e2  51%, #d4bdb0  100%);
+    text-transform: uppercase;
     height: 40px;
     width: 100px;
     align-self: center;
     margin-right: 30px;
-
+    border-radius: 5px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(0, 0, 0);            
+    box-shadow: 0 0 20px #eee;
 }
 
 button:active {
@@ -37,13 +42,27 @@ button:active {
     transform: translateY(5px);
 }
 
+button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: rgb(100, 100, 100);
+    text-decoration: none;
+  }
+
 nav li {
     display: inline;
-    
+    justify-content: center;
+}
+
+a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    justify-content: center;
+    padding-top: 30px;
+    color: black;
 }
 
 #banner {
-    background-color: rgb(201, 201, 201);
+    background-color: rgb(220, 209, 189);
     max-height: 200px;
     min-height: 100px;
 
@@ -62,8 +81,19 @@ h3 {
     padding-right: 30px;
 }
 
-div {
+#products-available {
     display: flex;
-    background-color: brown;
-    height: 200px;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    
+}
+
+div img {
+    max-width: 350px;
+    min-width: 50px;
+    padding: 15px;
+}
+
+#all-products {
+    background-color: #e2dcdd;
 }
