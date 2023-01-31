@@ -2,7 +2,7 @@
 
 
 body{
-    background-color: rgb(211, 211, 211);
+    background-color: #f8f3e7;
 }
 
 #h1-manage-product{
@@ -18,7 +18,7 @@ body{
 /* Styling applied to the table required in manage products */
 table, tr, th, td{
     border: 2px solid black;
-    background-color: rgb(174, 172, 172);
+    background-color: #b1afaa;
 
 }
 
