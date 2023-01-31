@@ -35,6 +35,7 @@ button {
     background-size: 200% auto;
     color: rgb(0, 0, 0);            
     box-shadow: 0 0 20px #eee;
+    cursor: pointer;
 }
 
 button:active {
