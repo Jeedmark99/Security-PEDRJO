@@ -40,7 +40,22 @@ async function fetchAllProducts(){
         let productsHTML = "";
         for (let product of products){
             let productDate = new Date(product.date)
-            productsHTML += ` <tbody class = "productList"> <img src="http://127.0.0.1:5500/Security-PEDRJO/img/art7.jpg"> <td>${product.title}</td> <td>${product.description}</td> <td>${product.price}</td> <td>${product.stock}</td> <td>${product.category}</td> <td>${productDate.toLocaleDateString()}</td> </tbody> `;
+            productsHTML += `
+            <div id="art-cards">
+                <tbody class="productList">
+                    <td>   
+                        <img src="${product.image}">
+                    </td>
+                    <br>
+                    <h3> <td> ${product.title} </td> </h3>
+                    <br>
+                    <i><td>${product.description}</td></i>
+                    <p>Price: <td>${product.price}</td></p>
+                    <p>Stock: <td>${product.stock}</td></p>
+                    <p>Category: <td>${product.category}</td></p>
+                    <p>Date added: <td>${productDate.toLocaleDateString()}</td></p>
+                </tbody>
+            </div> `;
         }
 
         document.getElementById('all-products').innerHTML += productsHTML

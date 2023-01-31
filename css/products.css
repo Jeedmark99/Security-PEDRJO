@@ -102,7 +102,21 @@ div img {
     flex-wrap: wrap;
     flex-direction: row;
     background-color: #f8f3e7;
+}
 
+#art-cards {
+    border: 2px solid black;
+    padding: 25px;
+    border-radius: 25px;
+    max-width: 340px;
+    max-height: 553px;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.507) 0%, rgba(232,225,213,1) 25%, rgba(255, 255, 255, 0.76) 100%);
+}
+
+#art-cards h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
 }
 
 footer {
