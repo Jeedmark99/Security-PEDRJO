@@ -10,8 +10,7 @@ admin/manage-products.html
 
  * 
  */
-
-
+const ROOT_URL = "https://ai-art-eshop.onrender.com";
 
 async function fetchAllProducts(){
     try{
@@ -29,7 +28,7 @@ async function fetchAllProducts(){
         const data = await response1.json();
         console.log(data.accessToken);
 
-        const response2 = await fetch ('http://localhost:5000/products', {
+        const response2 = await fetch (ROOT_URL + '/products', {
             method:"GET",
             headers:{
                 'Authorization': 'Bearer ' + data.accessToken
