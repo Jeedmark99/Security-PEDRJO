@@ -43,10 +43,10 @@ async function updateProduct() {
             console.log(e.target);
 
          let title = document.getElementById('content-textarea').value
-         let price = document.getElementById('content-textarea2').value
-         let stock = document.getElementById('content-textarea3').value
-         let category = document.getElementById('content-textarea4').value
-         let description = document.getElementById('content-textarea5').value
+         let description = document.getElementById('content-textarea2').value
+         let price = document.getElementById('content-textarea3').value
+         let stock = document.getElementById('content-textarea4').value
+         let category = document.getElementById('content-textarea5').value
 
         let formDataObject = {
           title,
