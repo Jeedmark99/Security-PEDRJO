@@ -50,7 +50,7 @@ async function fetchAllProducts(){
                     <h3> <td> ${product.title} </td> </h3>
                     <br>
                     <i><td>${product.description}</td></i>
-                    <p>Price: <td>${product.price}</td></p>
+                    <p>Price: $<td>${product.price}</td></p>
                     <p>Stock: <td>${product.stock}</td></p>
                     <p>Category: <td>${product.category}</td></p>
                     <p>Date added: <td>${productDate.toLocaleDateString()}</td></p>
