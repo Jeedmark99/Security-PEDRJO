@@ -72,7 +72,7 @@ async function updateProduct() {
             
                 body: JSON.stringify(formDataObject)
             })
-            //location.replace('index.html');
+            location.replace('manage-products.html');
         //console.log(response2)    
         });
        
