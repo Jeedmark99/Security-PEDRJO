@@ -1,11 +1,10 @@
 // const ROOT_URL = "localhost:5000";
-
-const ROOT_URL = "http://localhost:5000";
+const ROOT_URL = "https://ai-art-eshop.onrender.com";
 
 async function generateAccessToken() {
     try {
         const response1 = await fetch(
-            ROOT_URL+ '/api-users/token', {
+            ROOT_URL + '/api-users/token', {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             headers: {
                 'Content-Type': 'application/json'

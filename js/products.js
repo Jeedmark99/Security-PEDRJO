@@ -10,7 +10,6 @@ admin/manage-products.html
 
  * 
  */
-const ROOT_URL = "https://ai-art-eshop.onrender.com";
 
 async function fetchAllProducts(){
     try{
