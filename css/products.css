@@ -1,0 +1,69 @@
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header img {
+    max-width: 25%;
+
+}
+
+header {
+
+    display: flex;
+    align-self: flex-end;
+}
+
+nav {
+    padding-top: 25px;
+    flex: 1
+}
+
+button {
+    background-color: rgb(223, 204, 176);
+    box-shadow: 0 5px 0 rgb(195, 178, 151);
+    height: 40px;
+    width: 100px;
+    align-self: center;
+    margin-right: 30px;
+
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+nav li {
+    display: inline;
+    
+}
+
+#banner {
+    background-color: rgb(201, 201, 201);
+    max-height: 200px;
+    min-height: 100px;
+
+}
+
+h1 {
+    font-size: 1em;
+    text-align: center;
+    padding-top: 30px;
+}
+
+h3 {
+    font-size: 0.5em;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+div {
+    display: flex;
+    background-color: brown;
+    height: 200px;
+}

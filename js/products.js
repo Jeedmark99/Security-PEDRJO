@@ -12,11 +12,10 @@ admin/manage-products.html
  */
 
 
-/*
 
 async function fetchAllProducts(){
     try{
-        const response1 = await fetch('http://localhost:5000/api-users/token%27,%7B
+        const response1 = await fetch('http://localhost:5000/api-users/token%27,%7B',{
             method:'POST',
             headers: {
                 'Content-Type':'application/json'
@@ -43,14 +42,16 @@ async function fetchAllProducts(){
         let productsHTML = "";
         for (let product of products){
             let productDate = new Date(product.date)
-            productsHTML += <div> <tbody class = "productList"> <td>${product.title}</td> <td>${product.description}</td> <td>${product.price}</td> <td>${product.stock}</td> <td>${product.category}</td> <td>${productDate.toLocaleDateString()}</td> <td> <a href="#" class="edit-links">Edit</a> <a href="#" class="delete-products-links" data-id=${product._id}>Delete</a></td> </tbody> </div>;
+            productsHTML += ` <tbody class = "productList"> <td>${product.title}</td> <td>${product.description}</td> <td>${product.price}</td> <td>${product.stock}</td> <td>${product.category}</td> <td>${productDate.toLocaleDateString()}</td> <td>
+                <a href="update-product.html?id=${product._id}" class="edit-links">Edit</a> <a href="#" class="delete-products-links" data-id=${product._id}>Delete</a></td> </tbody> `;
         }
 
-        document.getElementById('manage-products-table').innerHTML += productsHTML
+        document.getElementById('all-products').innerHTML += productsHTML
 
     } catch (error){
         console.log(error);
     }
+}
+
 fetchAllProducts();
 
-*/

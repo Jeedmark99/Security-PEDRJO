@@ -1,50 +1,52 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Art Products</title>
-
-    <!-- META -->
-
-    <meta
-        name="description"
-        content="Unique and luxury AI Art for your home and studio"
-      />
-    <meta name="robots" content="index,follow" />
   
-    <!-- OG CARD -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Art Products</title>
+
+  <!-- META -->
+
+  <meta name="description" content="Unique and luxury AI Art for your home and studio"/>
+  <meta name="robots" content="index,follow" />
   
-    <meta property="og:title" content="Unique High Quality AI Art" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:description" content="Unique and luxury AI Art for your home and studio" />
+  <!-- OG CARD -->
+  
+  <meta property="og:title" content="Unique High Quality AI Art" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:description" content="Unique and luxury AI Art for your home and studio" />
 
-    <!-- FAVICONS -->
+  <!-- FAVICONS -->
 
-    <link rel="icon" href="" />
+  <link rel="icon" href="img/logo-ai.jpg" />
 
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/products.css">
 </head>
 <body>
+  <header>
+    <img src="/img/logo-ai.jpg" alt="ai art">
     <nav class="nav">
-        <ul class="nav__ul">
-          <li><a href="#index">Home</a></li>
-          <li><a href="#products">Products</a></li>
-        </ul>
-      </nav>
-
-<!-- Följande är obligatoriska delar för G-nivå:
-● products.html:
-○ En länk högst upp på sidan, som navigerar till admin sidan, dvs till
-admin/manage-products.html
-○ Visa en lista på alla produkter. Varje produkt skall visa minst
-■ Title
-■ Price
- -->
-
-
+      <ul class="nav__ul">
+        <li><a href="admin/index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+      </ul>
+    </nav>
+    <button type="button" >admin</button>
+  </header>
+  <section id="banner">
+    <h1>EXCLUSIVE AI ART</h1>
+    <h3>Our exclusive AI art is very expensive and you probably can't afford it. But you can always try</h3>
+  </section>
+  <div id="products-available">
+    <table id = "all-products">
+      <td>Title</td>
+      <td>Description</td>
+      <td>Price</td>
+    </table>
+  </div>
 
     <script src="js/products.js"></script>
 </body>
