@@ -1,4 +1,5 @@
 //          CREATE/ADD A NEW PRODUCT
+//  ROOT_URL = "http://localhost:5000"
 
 async function createProduct() {
 
@@ -10,10 +11,11 @@ async function createProduct() {
             console.log(e.target);
 
          let title = document.getElementById('content-textarea').value
-         let price = document.getElementById('content-textarea2').value
-         let stock = document.getElementById('content-textarea3').value
-         let category = document.getElementById('content-textarea4').value
-         let description = document.getElementById('content-textarea5').value
+         let description = document.getElementById('content-textarea2').value
+         let price = document.getElementById('content-textarea3').value
+         let stock = document.getElementById('content-textarea4').value
+         let category = document.getElementById('content-textarea5').value
+         
 
         let formDataObject = {
           title,
@@ -32,9 +34,6 @@ async function createProduct() {
                     'Content-Type': 'application/json',
 
                     'Authorization': 'Bearer ' + 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIwMDAiLCJkYXRlIjoiMjAyMy0wMS0yOFQxOTo1MzoyMi4wODJaIiwiaWF0IjoxNjc1MDA0MDc4fQ.7rfWU0MQkCP99S9RHtYxQa_sBWPk2nypk6lFtCIp2S4',
-
-                    //'Content-Type': 'application/x-www-form-urlencoded'
-
                 },
             
                 body: JSON.stringify(formDataObject)
@@ -48,7 +47,5 @@ async function createProduct() {
     }
 
 }
-
-
 createProduct();
 
