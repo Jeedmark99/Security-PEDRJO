@@ -1,3 +1,5 @@
+//UPDATE/EDIT A PRODUCT
+//  ROOT_URL = "http://localhost:5000/products" /id  ( PATCH)
 
 console.log(window.location.search);
 let urlParams = new URLSearchParams(window.location.search)
@@ -5,10 +7,8 @@ console.log(urlParams);
 console.log(urlParams.get('id'));
 
 async function fetchProduct() {
-    // console.log(JSON.stringify({username:"admin", password:"123"}));
     checkAccessToken();
     
-
     try {
         const response = await fetch(ROOT_URL + '/products/' + urlParams.get('id'), {
             method: 'GET', // *GET, POST, PUT, DELETE, etc.
@@ -65,14 +65,11 @@ async function updateProduct() {
                     'Content-Type': 'application/json',
 
                     'Authorization': 'Bearer ' + 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIwMDAiLCJkYXRlIjoiMjAyMy0wMS0yOFQxOTo1MzoyMi4wODJaIiwiaWF0IjoxNjc1MDA0MDc4fQ.7rfWU0MQkCP99S9RHtYxQa_sBWPk2nypk6lFtCIp2S4',
-
-                    //'Content-Type': 'application/x-www-form-urlencoded'
-
                 },
             
                 body: JSON.stringify(formDataObject)
             })
-            //location.replace('index.html');
+            location.replace('manage-products.html');
         //console.log(response2)    
         });
        
