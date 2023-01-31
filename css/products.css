@@ -112,6 +112,11 @@ div img {
     max-height: 553px;
     background: rgb(2,0,36);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.507) 0%, rgba(232,225,213,1) 25%, rgba(255, 255, 255, 0.76) 100%);
+    transition: all .2s ease-in-out;
+}
+
+#art-cards:hover {
+    transform: scale(1.01);
 }
 
 #art-cards h3 {
