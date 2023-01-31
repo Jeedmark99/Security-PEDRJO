@@ -19,7 +19,12 @@ async function fetchProduct() {
 
         const product = await response.json()
         console.log(product)
-        document.getElementById('content-textarea').value = product.content;
+        document.getElementById('content-textarea').value = product.title;
+        document.getElementById('content-textarea2').value = product.description;
+        document.getElementById('content-textarea3').value = product.price;
+        document.getElementById('content-textarea4').value = product.stock;
+        document.getElementById('content-textarea5').value = product.category;
+        
 
     } catch (error) {
         console.log(error);
@@ -28,7 +33,7 @@ async function fetchProduct() {
 fetchProduct()
 
 
-async function createProduct() {
+async function updateProduct() {
 
     checkAccessToken()
 
@@ -37,11 +42,11 @@ async function createProduct() {
             e.preventDefault();
             console.log(e.target);
 
-         let title = document.getElementById('title').value
-         let price = document.getElementById('price').value
-         let stock = document.getElementById('stock').value
-         let category = document.getElementById('category').value
-         let description = document.getElementById('description').value
+         let title = document.getElementById('content-textarea').value
+         let price = document.getElementById('content-textarea2').value
+         let stock = document.getElementById('content-textarea3').value
+         let category = document.getElementById('content-textarea4').value
+         let description = document.getElementById('content-textarea5').value
 
         let formDataObject = {
           title,
@@ -54,7 +59,7 @@ async function createProduct() {
         console.log(JSON.stringify(formDataObject))
 
 
-            const response2 = await fetch(ROOT_URL + '/products' + urlParams.get('id'), {
+            const response2 = await fetch(ROOT_URL + '/products/' + urlParams.get('id'), {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -76,25 +81,7 @@ async function createProduct() {
     }
 
 }
-createProduct();
+updateProduct();
 
 
-let serializeForm = function (form) {
-    var obj = {};
-    var formData = new FormData(form);
-    // console.log(formData.getAll());
-
-    for (var key of formData.keys()) {
-        let inputData = formData.getAll(key);
-
-        if (inputData.length > 1) {
-            obj[key] = inputData;
-        } else {
-            obj[key] = inputData[0];    
-        }
-    }
-    
-    // console.log(obj);
-    return obj;
-};
 
