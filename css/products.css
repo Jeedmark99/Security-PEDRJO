@@ -75,17 +75,10 @@ h1 {
 }
 
 h3 {
-    font-size: 0.5em;
+    font-size: 0.8em;
     text-align: center;
     padding-left: 30px;
     padding-right: 30px;
-}
-
-#products-available {
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    justify-content: center;
-    
 }
 
 div img {
@@ -94,6 +87,29 @@ div img {
     padding: 15px;
 }
 
+.products-available {
+    display: flex;
+    flex: 50%;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+}
+
 #all-products {
-    background-color: #e2dcdd;
+    margin: 100px;
+    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #f8f3e7;
+
+}
+
+footer {
+    background-color: #e8e1d5;
+    height: 200px;
+}
+
+#copy {
+    padding-top: 100px;
+    text-align: center;
 }
