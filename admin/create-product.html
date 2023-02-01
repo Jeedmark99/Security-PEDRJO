@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/admin/css/create.css">
+    <link rel="stylesheet" href="css/create.css">
     
     <title>Create a new produt</title>
 </head>
@@ -19,15 +19,19 @@
                <!--  input data     -->                           
         <form id="create-product-form">
             <div> Title
-                <input name="title" id="content-textarea"></div>
+                <input name="title" id="content-textarea" required></div>
             <div> Description
-                <input name="description" id="content-textarea2"></div>
+                <input name="description" id="content-textarea2" required></div>
             <div> Price
-                <input name="price"  id="content-textarea3"></div>
+                <input name="price"  id="content-textarea3" required></div>
             <div> Stock
-                <input name="stock"  id="content-textarea4"></div>
+                <input name="stock"  id="content-textarea4" required></div>
             <div> Category
                 <input name="category" id="content-textarea5"></div>
+            <br>
+            <div>Image <br>
+                <input type="file" id="img" name="img" accept="image/*">
+            </div>
             <br>
              <input type="submit" id="btn" value="Create"> <!--create button-->
             
