@@ -1,7 +1,6 @@
 body{
     margin: auto;
-    background-color: rgba(128, 128, 128, 0.366);
-    
+    background-color: #f8f3e7;    
 }
 
 #container{
@@ -40,7 +39,7 @@ transition: all 100ms ease-in-out;
  box-shadow: 0 1px 0 0 rgb(35 38 59 / 5%);
 }
 #create-product-form{
-    color: #ffffff;
+    color: #7c7979;
     font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif; 
     font-style: normal; 
     font-variant: normal;
@@ -73,7 +72,7 @@ input:hover{
 }
 
 #link{
-    color: whitesmoke;
+    color: #7c7979;
     margin: 155px;
 }
 
@@ -86,7 +85,7 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 font-size: 17px;
 letter-spacing: 1px;
 word-spacing: 8px;
-color: #fffafa;
+color: #7c7979;
 font-weight: 500;
 text-decoration: underline double rgb(244, 241, 241);
 font-style: italic;

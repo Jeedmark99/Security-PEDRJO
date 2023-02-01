@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/admin/css/update.css">
+    <link rel="stylesheet" href="css/update.css">
     <title>Document</title>
 </head>
 <body>
@@ -18,17 +18,20 @@
        <!--  input data     -->
         <form id="update-product-form">
             <div> Title
-                <input name="title" id="content-textarea"></div>
+                <input name="title" id="content-textarea" required></div>
             <div> Description
-                <input name="description" id="content-textarea2"></div>
+                <input name="description" id="content-textarea2" required></div>
             <div> Price
-                <input name="price"  id="content-textarea3"></div>
+                <input name="price"  id="content-textarea3" required></div>
             <div> Stock
-                <input name="stock"  id="content-textarea4"></div>
+                <input name="stock"  id="content-textarea4" required></div>
             <div> Categories
                 <input name="categories" id="content-textarea5"></div>
-
-            <br>
+                <br>
+                <div>Image <br>
+                    <input type="file" id="img" name="img" accept="image/*">
+                </div>
+                <br>
              <input type="submit" id="btn" value="Update"> <!--update button-->
             
             <a href="manage-products.html" id="link"> &#8617; Back </a> <!--links back to admin page-->
