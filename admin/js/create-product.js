@@ -10,6 +10,7 @@ async function createProduct() {
             e.preventDefault();
             console.log(e.target);
 
+         let image = document.getElementById('img-textarea').value
          let title = document.getElementById('content-textarea').value
          let description = document.getElementById('content-textarea2').value
          let price = document.getElementById('content-textarea3').value
@@ -18,6 +19,7 @@ async function createProduct() {
          
 
         let formDataObject = {
+          image,
           title,
           description,
           price,
